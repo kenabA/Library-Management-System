@@ -2,25 +2,21 @@ import java.util.ArrayList;
 
 class MyLibrary {
   public ArrayList<Book> books;
-
   public MyLibrary(ArrayList<Book> books) {
     this.books = books;
   }
 
   public void addBook(Book addingBook) {
-
     if (books.contains(addingBook)) {
       System.out.println("Book exists already. Cannot add.");
     } else {
       System.out.println("Successfully added.");
       this.books.add(addingBook);
     }
-
   }
 
   public void returnBook(Book returnedBook, String name) {
     if (books.contains(returnedBook)) {
-
       System.out.println("Book not issued yet.");
     } else {
       System.out.println("Successfully returned by " + name + ".");
@@ -35,15 +31,11 @@ class MyLibrary {
     } else {
       System.out.println("Book of the name " + issuingBook.name + " already been issued. Sorry. ");
     }
-
   }
-
 }
 
 class Book {
-
   public String name, author;
-
   public Book(String name, String author) {
     this.name = name;
     this.author = author;
